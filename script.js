@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var playlist = [
     {
-      title: 'Black Sheep (Brie Larson Vocal Version)',
+      title: 'Summertime · Sex Bob-Omb',
       src: 'img/Song.mp3'
     },
 

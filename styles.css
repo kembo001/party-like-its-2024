@@ -243,7 +243,10 @@ body{
 }
 
 .right-side h2{
-  font-family: "IBM Plex Mono", serif;
+  font-family: "Press Start 2P", serif ;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 
@@ -380,7 +383,7 @@ body {
 }
 
 .btn:hover {
-  transform: translateY(-5px);
+background: linear-gradient(353deg, #ff00ff, #00ffff);;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
 }
 
@@ -458,4 +461,9 @@ body {
   border: 2px solid #00FFFF; /* Neon cyan border */
   box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.5); /* Glowing shadow */
   color: #FFFFFF; /* White text for contrast */
+}
+
+.left-side article p{
+  font-size: 2rem;
+  margin: 5px 0;
 }
