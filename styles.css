@@ -457,7 +457,7 @@ background: linear-gradient(353deg, #ff00ff, #00ffff);;
 
 .after-window, .about-me {
   background: #1A1F3A; /* Dark blue background */
-  padding: 0px 2rem 15px;
+  padding: 0px 1rem 15px;
   border: 2px solid #00FFFF; /* Neon cyan border */
   box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.5); /* Glowing shadow */
   color: #FFFFFF; /* White text for contrast */
@@ -467,3 +467,7 @@ background: linear-gradient(353deg, #ff00ff, #00ffff);;
   font-size: 2rem;
   margin: 5px 0;
 }
+
+ .about-me h2{
+   font-size: 1.3rem;
+ }
