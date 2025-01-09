@@ -471,3 +471,13 @@ background: linear-gradient(353deg, #ff00ff, #00ffff);;
  .about-me h2{
    font-size: 1.3rem;
  }
+
+ .gallery-images.Tennis {
+  display: grid
+;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.Tennis .gallery-item{
+  margin-right: 5px;
+}
