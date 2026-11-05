@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>=====Party Like it's 2024=====</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-page">
+
+  <p class="wordart" aria-hidden="true">
+    <span class="wordart__line wordart__line--small">Party Like it's</span>
+    <span class="wordart__line wordart__line--big">2024</span>
+  </p>
+
+  <main class="login">
+    <form class="window" id="loginForm" autocomplete="off" aria-labelledby="loginTitle">
+      <div class="title-bar">
+        <h1 class="title-bar__title" id="loginTitle">Welcome to 2024</h1>
+        <div class="title-bar__controls" aria-hidden="true"><span class="ctl ctl--close"></span></div>
+      </div>
+      <div class="login__body">
+        <span class="login__icon" aria-hidden="true"></span>
+        <div class="login__fields">
+          <p>Type the password to enter Party Like it's 2024.</p>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" autofocus>
+          <p class="login__hint">Hint: My favorite color</p>
+        </div>
+      </div>
+      <div class="login__actions">
+        <button type="submit" class="btn" id="submitBtn">OK</button>
+        <button type="reset" class="btn">Cancel</button>
+      </div>
+    </form>
+  </main>
+
+  <div id="customModal" class="modal" role="alertdialog" aria-modal="true" aria-labelledby="errorTitle" aria-describedby="errorMessage">
+    <div class="window error-dialog">
+      <div class="title-bar">
+        <h2 class="title-bar__title" id="errorTitle">Error</h2>
+        <div class="title-bar__controls"><button type="button" class="ctl ctl--close" data-close-modal aria-label="Close"></button></div>
+      </div>
+      <div class="error-dialog__body">
+        <span class="error-dialog__icon" aria-hidden="true"></span>
+        <div class="error-dialog__media">
+          <img id="modalImage" alt="Game over" hidden>
+          <p id="errorMessage">Wrong password. Try again!</p>
+        </div>
+      </div>
+      <div class="error-dialog__actions">
+        <button type="button" class="btn" data-close-modal>OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

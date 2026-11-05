@@ -1,166 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="styles.css">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>=====Party Like it's 2024=====</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>=====Party Like it's 2024=====</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="header">
-        <h1><span class="color-span">P</span><span class="color-span">a</span><span class="color-span">r</span><span class="color-span">t</span><span class="color-span">y</span>
-          <span class="color-span">L</span><span class="color-span">i</span><span class="color-span">k</span><span class="color-span">e</span>
-          <span class="color-span">i</span><span class="color-span">t</span>'<span class="color-span">s</span>
-          <span class="color-span">2</span><span class="color-span">0</span><span class="color-span">2</span><span class="color-span">4</span>
-        
-        </h1>
-    </div>
-    <section>
-        <div class="left-side">
-            <article class="window">
-              <div class="title-bar">
-                <div>
-                  <span class="title-bar__title">Music player</span>
-                </div>
-              </div>
-              <div class="menu">
-<img src="img/SCOTT.gif" alt="">
-              </div>
-              <div class="container">
-                <div class="display">
-                  <span id="scrollingText" data-track="Summertime · Sex Bob-Omb">
-                    Summertime · Sex Bob-Omb
-                  </span>
-                </div>
-                <div class="controls">
-                  <button class="btn btn_auto" id="playPauseBtn">Play</button>
-                </div>
-              </div>
-            </article>
-            <article class="about-me">
-              <h2>About Brandon Kemboi</h2>
-              <div class="box">
-                <div>
-                  <img src="img/walking.gif" alt="">
-                </div>
-                <div class="stats">
-                  <ul>
-                    <li>Year: 2024</li>
-                    <li>Name: Brandon</li>
-                    <li>overall: 84</li>
-                    <li>Badges: <span style="color: gold;">1 Gold</span> <span style="color: silver;">4 silver</span>, <span style="color: #CD7F32;">2 bronze</span></li>
-                    <li>Marital status: Single</li>
-                    <li>Kids: 0</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article class="after-window">
-              <p>Current Look</p>
-<div class="gallery-item"><img src="img/selfi.jpg" alt=""></div>
-            </article>
+  <header class="header" id="top">
+    <h1 class="wordart">
+      <span class="wordart__line wordart__line--small">Party Like it's</span>
+      <span class="wordart__line wordart__line--big">2024</span>
+    </h1>
+    <nav class="webring" aria-label="Other years">
+      <a class="btn" href="https://party-like-its-2023.vercel.app/main.html">◀ 2023</a>
+      <span class="webring__dot" aria-hidden="true">·</span>
+      <span class="webring__current" aria-current="page">2024</span>
+      <span class="webring__dot" aria-hidden="true">·</span>
+      <button class="btn" type="button" disabled>2025 ▶ <span class="webring__soon">coming soon</span></button>
+    </nav>
+  </header>
 
-            <article class="after-window">
-              <p>Craziest Thing in 2024</p>
-              <div class="gallery-item"><img src="img/hq720.jpg" alt=""></div>
-            </article>
+  <main class="desktop">
 
-            <article class="after-window">
-              <p>Mood</p>
-              <video width="100%" height="" controls="" poster=""> <source src="./img/RPReplay_Final1722437154.mov" type="video/mp4"> Your browser does not support the video tag. </video>
-            </article>
-
-            <article class="after-window">
-              <p>NFL and NBA Champs</p>
- <div style="display: flex;">
-  <div class="gallery-item"><img src="img/Boston.jpg" alt="" width="200px"></div>
-  <div class="gallery-item"><img src="img/Cheifs.jpg" alt="" width="200px" style="    object-fit: cover;"></div>
- </div>
-            </article>
+    <!-- ================= LEFT ================= -->
+    <div class="left-side">
+      <article class="window player" id="music">
+        <div class="title-bar">
+          <h2 class="title-bar__title"><span class="icon icon--cd" aria-hidden="true"></span>Music player</h2>
+          <div class="title-bar__controls" aria-hidden="true"><span class="ctl ctl--min"></span><span class="ctl ctl--max"></span><span class="ctl ctl--close"></span></div>
         </div>
+        <div class="player__art">
+          <img src="img/SCOTT.gif" alt="">
+        </div>
+        <div class="lcd">
+          <div class="lcd__top">
+            <span>NOW PLAYING</span>
+            <span class="lcd__time" id="trackTime">[01] 00:00</span>
+          </div>
+          <div class="display">
+            <span id="scrollingText" data-track="Summertime · Sex Bob-Omb">Summertime · Sex Bob-Omb</span>
+          </div>
+          <div class="eq" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="player__controls">
+          <button class="btn btn--play" type="button" id="playPauseBtn">Play</button>
+          <button class="btn btn--stop" type="button" id="stopBtn">Stop</button>
+        </div>
+      </article>
 
-        <div class="right-side">
-          <article class="photo-of-year">
-            <h2 style="text-align: center;">Photo of the Year</h2>
-           <div class="gallery-item">
-            <img src="img/IMG_5252.jpg" alt="" style="width: 800px;">
-           </div>
-          </article>
-          <article>
-            <h2>Song of the Year</h2>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1TUHiLBQ6CVYZQOgnLjHbM?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            
-          </article>
-<div class="gallery-container">
-  <article class="gallery">
-    <h2>South Africa</h2>
-    <div class="gallery-images">
-      <div class="gallery-item"><img src="img/South Africa/IMG_8393.jpg" alt=""></div>
-      <div class="gallery-item"><img src="img/South Africa/IMG_2711.jpg" alt=""></div>
-      <div class="gallery-item"><img src="img/South Africa/IMG_0428.JPG" alt=""></div>
-      <div class="gallery-item"><img src="img/South Africa/IMG_4008.jpg" alt=""></div>
-      <div class="gallery-item"><img src="img/South Africa/IMG_4094.jpg" alt=""></div>
-      <a href="south-africa.html"><div class="see-more"><img src="img/South Africa/IMG_3502.jpg" alt=""><span>See more</span></div></a>    
+      <article class="window sysprops" id="about">
+        <div class="title-bar">
+          <span class="title-bar__title"><span class="icon icon--computer" aria-hidden="true"></span>System Properties</span>
+          <div class="title-bar__controls" aria-hidden="true"><span class="ctl ctl--min"></span><span class="ctl ctl--max"></span><span class="ctl ctl--close"></span></div>
+        </div>
+        <div class="tabs" aria-hidden="true">
+          <span class="tab tab--active">General</span>
+        </div>
+        <div class="tab-panel">
+          <div class="monitor">
+            <div class="monitor__bezel">
+              <div class="monitor__screen"><img src="img/walking.gif" alt=""></div>
+            </div>
+          </div>
+          <h2 class="sysprops__name">About Brandon Kemboi</h2>
+          <dl class="stats sunken">
+            <div><dt>Year:</dt><dd>2024</dd></div>
+            <div><dt>Name:</dt><dd>Brandon</dd></div>
+            <div><dt>overall:</dt><dd>84</dd></div>
+            <div><dt>Badges:</dt><dd><span class="medal medal--gold">1 Gold</span> <span class="medal medal--silver">4 silver</span>, <span class="medal medal--bronze">2 bronze</span></dd></div>
+            <div><dt>Marital status:</dt><dd>Single</dd></div>
+            <div><dt>Kids:</dt><dd>0</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="window" id="mood">
+        <div class="title-bar">
+          <h2 class="title-bar__title"><span class="icon icon--video" aria-hidden="true"></span>Mood</h2>
+          <div class="title-bar__controls" aria-hidden="true"><span class="ctl ctl--min"></span><span class="ctl ctl--max"></span><span class="ctl ctl--close"></span></div>
+        </div>
+        <div class="window__body">
+          <div class="media-screen">
+            <video controls preload="metadata" playsinline><source src="./img/RPReplay_Final1722437154.mov" type="video/mp4"> Your browser does not support the video tag. </video>
+          </div>
+        </div>
+      </article>
     </div>
-  </article>
 
-  <article class="gallery">
-    <h2>Portugal</h2>
-    <div class="gallery-images">
-      <div class="gallery-item"><img src="img/Portugal/IMG_4503-2.jpg" alt=""></div>
-      <div class="gallery-item"><img src="img/Portugal/IMG_4243.jpg" alt=""></div>
-      <div class="gallery-item"><img src="img/Portugal/IMG_4388.jpg" alt=""></div>
-      <div class="gallery-item"><img src="img/Portugal/IMG_4409.jpg" alt=""></div>
-      <div class="gallery-item"><img src="img/Portugal/IMG_4427.jpg" alt=""></div>
-      <div class="gallery-item"><img src="img/Portugal/IMG_4437.jpg" alt=""></div>
+    <!-- ================= MAIN ================= -->
+    <div class="main-side">
+      <article class="window photo-of-year" id="photo-of-the-year">
+        <div class="title-bar">
+          <h2 class="title-bar__title"><span class="icon icon--picture" aria-hidden="true"></span>Photo of the Year</h2>
+          <div class="title-bar__controls" aria-hidden="true"><span class="ctl ctl--min"></span><span class="ctl ctl--max"></span><span class="ctl ctl--close"></span></div>
+        </div>
+        <div class="window__body">
+          <div class="viewer">
+            <div class="gallery-item"><img src="img/IMG_5252.jpg" alt=""></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="window song" id="song">
+        <div class="title-bar">
+          <h2 class="title-bar__title"><span class="icon icon--cd" aria-hidden="true"></span>Song of the Year</h2>
+          <div class="title-bar__controls" aria-hidden="true"><span class="ctl ctl--min"></span><span class="ctl ctl--max"></span><span class="ctl ctl--close"></span></div>
+        </div>
+        <div class="window__body">
+          <iframe title="Song of the Year on Spotify" src="https://open.spotify.com/embed/track/1TUHiLBQ6CVYZQOgnLjHbM?utm_source=generator" height="352" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="window" id="moments">
+        <div class="title-bar">
+          <h2 class="title-bar__title"><span class="icon icon--folder" aria-hidden="true"></span>2024 Moments</h2>
+          <div class="title-bar__controls" aria-hidden="true"><span class="ctl ctl--min"></span><span class="ctl ctl--max"></span><span class="ctl ctl--close"></span></div>
+        </div>
+        <div class="window__body contact-wrap">
+          <div class="contact-sheet">
+            <figure class="frame frame--portrait">
+              <div class="frame__film"><div class="gallery-item"><img src="img/selfi.jpg" alt="" loading="lazy"></div></div>
+              <figcaption>Current Look</figcaption>
+            </figure>
+            <figure class="frame">
+              <div class="frame__film"><div class="gallery-item"><img src="img/hq720.jpg" alt="" loading="lazy"></div></div>
+              <figcaption>Craziest Thing in 2024</figcaption>
+            </figure>
+            <figure class="frame frame--pair">
+              <div class="frame__film">
+                <div class="gallery-item"><img src="img/Cheifs.jpg" alt="" loading="lazy"></div>
+                <div class="gallery-item"><img src="img/Boston.jpg" alt="" loading="lazy"></div>
+              </div>
+              <figcaption>NFL and NBA Champs</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="window gallery" id="south-africa">
+        <div class="title-bar">
+          <h2 class="title-bar__title"><span class="icon icon--folder" aria-hidden="true"></span>South Africa</h2>
+          <div class="title-bar__controls" aria-hidden="true"><span class="ctl ctl--min"></span><span class="ctl ctl--max"></span><span class="ctl ctl--close"></span></div>
+        </div>
+        <div class="window__body explorer__view">
+          <div class="gallery-images">
+            <div class="gallery-item"><img src="img/South Africa/IMG_8393.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-item"><img src="img/South Africa/IMG_2711.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-item"><img src="img/South Africa/IMG_0428.JPG" alt="" loading="lazy"></div>
+            <div class="gallery-item"><img src="img/South Africa/IMG_4008.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-item"><img src="img/South Africa/IMG_4094.jpg" alt="" loading="lazy"></div>
+            <a class="see-more" href="south-africa.html"><img src="img/South Africa/IMG_3502.jpg" alt="" loading="lazy"><span>See more</span></a>
+          </div>
+          <div class="statusbar"><span>6 object(s)</span></div>
+        </div>
+      </article>
+
+      <article class="window gallery" id="portugal">
+        <div class="title-bar">
+          <h2 class="title-bar__title"><span class="icon icon--folder" aria-hidden="true"></span>Portugal</h2>
+          <div class="title-bar__controls" aria-hidden="true"><span class="ctl ctl--min"></span><span class="ctl ctl--max"></span><span class="ctl ctl--close"></span></div>
+        </div>
+        <div class="window__body explorer__view">
+          <div class="gallery-images">
+            <div class="gallery-item"><img src="img/Portugal/IMG_4503-2.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-item"><img src="img/Portugal/IMG_4243.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-item"><img src="img/Portugal/IMG_4388.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-item"><img src="img/Portugal/IMG_4409.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-item"><img src="img/Portugal/IMG_4427.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-item"><img src="img/Portugal/IMG_4437.jpg" alt="" loading="lazy"></div>
+          </div>
+          <div class="statusbar"><span>6 object(s)</span></div>
+        </div>
+      </article>
+
+      <article class="window" id="tennis">
+        <div class="title-bar">
+          <h2 class="title-bar__title"><span class="icon icon--video" aria-hidden="true"></span>Tennis Progression</h2>
+          <div class="title-bar__controls" aria-hidden="true"><span class="ctl ctl--min"></span><span class="ctl ctl--max"></span><span class="ctl ctl--close"></span></div>
+        </div>
+        <div class="window__body media-pair">
+          <div class="media-screen">
+            <video controls preload="metadata" playsinline><source src="./img/08-01-2023-Filtered-Shots.MP4" type="video/mp4"> Your browser does not support the video tag. </video>
+          </div>
+          <div class="media-screen">
+            <video controls preload="metadata" playsinline><source src="./img/11-13-2024-Filtered-Shots 2.MP4" type="video/mp4"> Your browser does not support the video tag. </video>
+          </div>
+        </div>
+      </article>
     </div>
-  </article>
 
-  <article class="gallery">
-    <h2>Tennis Progression</h2>
-    <div class="gallery-images Tennis">
-      <div class="gallery-item">  <video width="100%" height="" controls="" poster=""> <source src="./img/08-01-2023-Filtered-Shots.MP4" type="video/mp4"> Your browser does not support the video tag. </video></div>
-      <div class="gallery-item">  <video width="100%" height="" controls="" poster=""> <source src="./img/11-13-2024-Filtered-Shots 2.MP4" type="video/mp4"> Your browser does not support the video tag. </video></div>
+    <!-- ================= RIGHT ================= -->
+    <aside class="right-side">
+      <nav class="window" id="explorer" aria-label="Sections of this page">
+        <div class="title-bar">
+          <span class="title-bar__title"><span class="icon icon--drive" aria-hidden="true"></span>Exploring - 2024</span>
+          <div class="title-bar__controls" aria-hidden="true"><span class="ctl ctl--min"></span><span class="ctl ctl--max"></span><span class="ctl ctl--close"></span></div>
+        </div>
+        <div class="tree sunken">
+          <a class="tree__root" href="#top"><span class="icon icon--drive" aria-hidden="true"></span><span class="tree__label">2024 (C:)</span></a>
+          <ul>
+            <li>
+              <details open>
+                <summary><span class="icon icon--folder" aria-hidden="true"></span><span class="tree__label">My Music</span></summary>
+                <ul>
+                  <li><a href="#music"><span class="icon icon--cd" aria-hidden="true"></span><span class="tree__label">Music player</span></a></li>
+                  <li><a href="#song"><span class="icon icon--cd" aria-hidden="true"></span><span class="tree__label">Song of the Year</span></a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary><span class="icon icon--folder" aria-hidden="true"></span><span class="tree__label">My Pictures</span></summary>
+                <ul>
+                  <li><a href="#photo-of-the-year"><span class="icon icon--picture" aria-hidden="true"></span><span class="tree__label">Photo of the Year</span></a></li>
+                  <li><a href="#moments"><span class="icon icon--picture" aria-hidden="true"></span><span class="tree__label">2024 Moments</span></a></li>
+                  <li><a href="#south-africa"><span class="icon icon--folder" aria-hidden="true"></span><span class="tree__label">South Africa</span><span class="new-tag">NEW!</span></a></li>
+                  <li><a href="#portugal"><span class="icon icon--folder" aria-hidden="true"></span><span class="tree__label">Portugal</span><span class="new-tag">NEW!</span></a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary><span class="icon icon--folder" aria-hidden="true"></span><span class="tree__label">My Videos</span></summary>
+                <ul>
+                  <li><a href="#mood"><span class="icon icon--video" aria-hidden="true"></span><span class="tree__label">Mood</span></a></li>
+                  <li><a href="#tennis"><span class="icon icon--video" aria-hidden="true"></span><span class="tree__label">Tennis Progression</span><span class="new-tag">NEW!</span></a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="#about"><span class="icon icon--computer" aria-hidden="true"></span><span class="tree__label">About Brandon Kemboi</span></a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="window" id="calendar" aria-labelledby="calendarTitle">
+        <div class="title-bar">
+          <h2 class="title-bar__title" id="calendarTitle"><span class="icon icon--calendar" aria-hidden="true"></span>Calendar</h2>
+          <div class="title-bar__controls" aria-hidden="true"><span class="ctl ctl--min"></span><span class="ctl ctl--max"></span><span class="ctl ctl--close"></span></div>
+        </div>
+        <div class="window__body">
+          <div class="cal__head">
+            <span class="cal__field" id="calMonth">January</span>
+            <span class="cal__field cal__field--year">2024</span>
+          </div>
+          <table class="cal" id="calTable">
+            <thead>
+              <tr><th scope="col" abbr="Sunday">S</th><th scope="col" abbr="Monday">M</th><th scope="col" abbr="Tuesday">T</th><th scope="col" abbr="Wednesday">W</th><th scope="col" abbr="Thursday">T</th><th scope="col" abbr="Friday">F</th><th scope="col" abbr="Saturday">S</th></tr>
+            </thead>
+            <tbody id="calBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <!-- ================= LIGHTBOX ================= -->
+  <div id="myModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalCaption">
+    <div class="window modal-window">
+      <div class="title-bar">
+        <span class="title-bar__title"><span class="icon icon--picture" aria-hidden="true"></span><span id="modalCaption">Photo</span></span>
+        <div class="title-bar__controls"><button type="button" class="ctl ctl--close" id="modalClose" aria-label="Close"></button></div>
+      </div>
+      <div class="modal-body">
+        <img class="modal-content" id="modalImg" alt="">
+      </div>
+      <div class="modal-nav">
+        <button type="button" class="btn" id="prevBtn">◀ Prev</button>
+        <span class="modal-count" id="modalCount"></span>
+        <button type="button" class="btn" id="nextBtn">Next ▶</button>
+      </div>
     </div>
-  </article>
-
-
-  <article class="after-gallery">
-    <p>Craziest Thing in 2024</p>
-    <div class="gallery-item"><img src="img/hq720.jpg" alt=""></div>
-  </article>
-
-  <article class="after-gallery">
-    <p>Mood</p>
-    <video width="100%" height="" controls="" poster=""> <source src="./img/RPReplay_Final1722437154.mov" type="video/mp4"> Your browser does not support the video tag. </video>
-  </article>
-
-  <article class="after-gallery">
-    <p>NFL and NBA Champs</p>
-<div style="display: flex;">
-<div class="gallery-item"><img src="img/Cheifs.jpg" alt="" width="180px"></div>
-<div class="gallery-item"><img src="img/Boston.jpg" alt="" width="180px" height="120px" style="    object-fit: cover;"></div>
-</div>
-  </article>
-
-  <div id="myModal" class="modal">
-    <div class="modal-nav">
-      <button id="prevBtn">&lt;</button>
-      <button id="nextBtn">&gt;</button>
-    </div>
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImg">
   </div>
-</div>
-        </div>
-    </section>
+
+  <!-- ================= TASKBAR ================= -->
+  <nav class="taskbar" aria-label="Taskbar">
+    <button type="button" class="btn taskbar__start" id="startBtn" aria-expanded="false" aria-controls="startMenu"><span class="icon icon--moon" aria-hidden="true"></span>Start</button>
+    <div class="taskbar__tasks">
+      <a class="taskbar__task" href="#music"><span class="icon icon--cd" aria-hidden="true"></span>Music player</a>
+      <a class="taskbar__task" href="#moments"><span class="icon icon--folder" aria-hidden="true"></span>2024 Moments</a>
+      <a class="taskbar__task" href="#explorer"><span class="icon icon--drive" aria-hidden="true"></span>Exploring - 2024</a>
+    </div>
+    <div class="taskbar__tray" id="tray">
+      <span class="tray__note" aria-hidden="true">♫</span>
+      <span id="taskbarTime">12:00 AM</span>
+      <span id="taskbarDate">1/1/2024</span>
+    </div>
+
+    <div class="start-menu" id="startMenu" hidden>
+      <div class="start-menu__banner" aria-hidden="true"><span>Party <b>2024</b></span></div>
+      <ul class="start-menu__list">
+        <li><a href="#photo-of-the-year"><span class="icon icon--picture" aria-hidden="true"></span>Photo of the Year</a></li>
+        <li><a href="#song"><span class="icon icon--cd" aria-hidden="true"></span>Song of the Year</a></li>
+        <li><a href="#moments"><span class="icon icon--folder" aria-hidden="true"></span>2024 Moments</a></li>
+        <li><a href="#south-africa"><span class="icon icon--folder" aria-hidden="true"></span>South Africa</a></li>
+        <li><a href="#portugal"><span class="icon icon--folder" aria-hidden="true"></span>Portugal</a></li>
+        <li><a href="#tennis"><span class="icon icon--video" aria-hidden="true"></span>Tennis Progression</a></li>
+        <li class="start-menu__sep" role="separator"></li>
+        <li class="start-menu__item--screensaver"><button type="button" id="screensaverBtn"><span class="icon icon--moon" aria-hidden="true"></span>Starfield screensaver</button></li>
+        <li><a href="#top"><span class="icon icon--drive" aria-hidden="true"></span>Back to top</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <canvas class="screensaver" id="screensaver" hidden aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
 </body>
 </html>
-<script src="script.js"></script>
-

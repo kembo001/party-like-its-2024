@@ -1,30 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>South Africa</title>
-    <link rel="stylesheet" href="sa.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>South Africa</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="sa.css">
 </head>
-<body>
-    <div class="header">
-        <h1>South Africa
-        </h1>
-        <div class="gallery-container">
-            <article class="gallery">
-              <div class="gallery-images">
-                <div class="gallery-item"><img src="img/South Africa/IMG_8393.jpg" alt=""></div>
-                <div class="gallery-item"><img src="img/South Africa/IMG_2711.jpg" alt=""></div>
-                <div class="gallery-item"><img src="img/South Africa/IMG_0428.JPG" alt=""></div>
-                <div class="gallery-item"><img src="img/South Africa/IMG_4008.jpg" alt=""></div>
-                <div class="gallery-item"><img src="img/South Africa/IMG_4094.jpg" alt=""></div>
-                <div class="gallery-item"><img src="img/South Africa/IMG_3502.jpg" alt=""></div>
-              </div>
-            </article>
+<body class="sa-page">
+  <header class="header page-header">
+    <h1 class="wordart"><span class="wordart__line wordart__line--big">South Africa</span></h1>
+    <nav class="webring" aria-label="Back">
+      <a class="btn" href="main.html#south-africa">◀ Back to 2024</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <article class="window gallery">
+      <div class="title-bar">
+        <h2 class="title-bar__title"><span class="icon icon--folder" aria-hidden="true"></span>South Africa</h2>
+        <div class="title-bar__controls" aria-hidden="true"><span class="ctl ctl--min"></span><span class="ctl ctl--max"></span><span class="ctl ctl--close"></span></div>
+      </div>
+      <div class="window__body explorer__view">
+        <div class="gallery-images">
+          <div class="gallery-item"><img src="img/South Africa/IMG_8393.jpg" alt=""></div>
+          <div class="gallery-item"><img src="img/South Africa/IMG_2711.jpg" alt=""></div>
+          <div class="gallery-item"><img src="img/South Africa/IMG_0428.JPG" alt=""></div>
+          <div class="gallery-item"><img src="img/South Africa/IMG_4008.jpg" alt=""></div>
+          <div class="gallery-item"><img src="img/South Africa/IMG_4094.jpg" alt=""></div>
+          <div class="gallery-item"><img src="img/South Africa/IMG_3502.jpg" alt=""></div>
         </div>
+        <div class="statusbar"><span>6 object(s)</span></div>
+      </div>
+    </article>
+  </main>
+
+  <div id="myModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalCaption">
+    <div class="window modal-window">
+      <div class="title-bar">
+        <span class="title-bar__title"><span class="icon icon--picture" aria-hidden="true"></span><span id="modalCaption">Photo</span></span>
+        <div class="title-bar__controls"><button type="button" class="ctl ctl--close" id="modalClose" aria-label="Close"></button></div>
+      </div>
+      <div class="modal-body">
+        <img class="modal-content" id="modalImg" alt="">
+      </div>
+      <div class="modal-nav">
+        <button type="button" class="btn" id="prevBtn">◀ Prev</button>
+        <span class="modal-count" id="modalCount"></span>
+        <button type="button" class="btn" id="nextBtn">Next ▶</button>
+      </div>
     </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-<script src="script.js"></script>
